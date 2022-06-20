@@ -3,7 +3,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"> 
   <title>3D Cube</title> 
   <link rel="stylesheet" href="sty.css"> 
-  <script src="ind.js"></script> 
+  <script>
+    var cube = document.querySelector('.cube');
+var radioGroup = document.querySelector('.radio-group');
+var currentClass = '';
+
+function changeSide() {
+  var checkedRadio = radioGroup.querySelector(':checked');
+  var showClass = 'show-' + checkedRadio.value;
+  if ( currentClass ) {
+    cube.classList.remove( currentClass );
+  }
+  cube.classList.add( showClass );
+  currentClass = showClass;
+}
+// set initial side
+changeSide();
+
+radioGroup.addEventListener( 'change', changeSide );
+  </script> 
  </head> 
  <body> 
   <div class="container3DCube"> 
