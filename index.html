@@ -2,7 +2,10 @@
   <meta charset="utf-8"> 
   <meta name="viewport" content="width=device-width, initial-scale=1"> 
   <title>3D Cube</title> 
- <script>
+<link rel="stylesheet" href="sty.css"> 
+ </head> 
+ <body> 
+<script>
 var cube = document.querySelector('.cube');
 var radioGroup = document.querySelector('.radio-group');
 var currentClass = '';
@@ -18,12 +21,8 @@ function changeSide() {
 }
 // set initial side
 changeSide();
-
 radioGroup.addEventListener( 'change', changeSide );
-
 </script>
- </head> 
- <body> 
   <div class="container3DCube"> 
    <div class="scene"> 
     <div class="cube"> 
